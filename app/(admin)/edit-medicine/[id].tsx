@@ -45,7 +45,7 @@ const EditMedicine = () => {
                         ? (itemDetails.categories as any).$id
                         : (itemDetails.categories || fetchedCats[0]?.$id || ''),
                 });
-            } catch (error: any) {
+            } catch {
                 Alert.alert("Error", "Could not fetch medicine details");
                 router.back();
             } finally {
@@ -54,7 +54,7 @@ const EditMedicine = () => {
         };
 
         fetchInitialData();
-    }, [id]);
+    }, [id, router]);
 
     const handleUpdate = async () => {
         if (!form.name || !form.description || !form.price || !form.categories) {

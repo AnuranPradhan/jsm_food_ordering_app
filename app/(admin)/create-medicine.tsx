@@ -29,7 +29,7 @@ const CreateMedicine = () => {
                 if (fetchedCats.length > 0) {
                     setForm(prev => ({ ...prev, categories: fetchedCats[0].$id }));
                 }
-            } catch (error: any) {
+            } catch {
                 Alert.alert("Error", "Could not fetch categories");
             } finally {
                 setIsLoadingCategories(false);

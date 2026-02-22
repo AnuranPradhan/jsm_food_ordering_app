@@ -65,7 +65,7 @@ const History = () => {
                                 </Text>
                             </View>
                         ));
-                    } catch (e) {
+                    } catch {
                         return <Text className="text-red-400 text-xs text-italic">Failed to load items.</Text>;
                     }
                 })()}
@@ -91,7 +91,7 @@ const History = () => {
                         {isLoading ? (
                             <ActivityIndicator size="large" color="#0286FF" />
                         ) : (
-                            <Text className="text-gray-500 text-base">You haven't placed any orders yet.</Text>
+                            <Text className="text-gray-500 text-base">You haven&apos;t placed any orders yet.</Text>
                         )}
                     </View>
                 )}

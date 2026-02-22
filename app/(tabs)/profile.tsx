@@ -5,13 +5,16 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import ProfileField from '@/components/ProfileField';
 import useAuthStore from '@/store/auth.store';
+import { useCartStore } from '@/store/cart.store';
 
 const Profile = () => {
     const { user, logout, isAdmin } = useAuthStore();
+    const { clearCart } = useCartStore();
     const router = useRouter();
 
     const handleLogout = async () => {
         await logout();
+        clearCart();
         router.replace('/(auth)/sign-in');
     };
 

@@ -84,7 +84,7 @@ const AdminOrders = () => {
                                         )}
                                     </View>
                                 ));
-                            } catch (e) {
+                            } catch {
                                 return <Text className="text-red-400 text-xs text-italic">Failed to load payload.</Text>;
                             }
                         })()}

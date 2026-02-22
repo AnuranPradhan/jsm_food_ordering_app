@@ -35,7 +35,7 @@ const EditProfile = () => {
             }
 
             // Send to Appwrite Database
-            const updatedDoc = await updateUserProfile(user.$id, {
+            await updateUserProfile(user.$id, {
                 name: form.name,
                 phone: parsedPhone,
                 address: form.address,

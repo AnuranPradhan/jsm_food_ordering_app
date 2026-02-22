@@ -17,13 +17,13 @@ const Search = () => {
 
     const { data, refetch, loading } = useAppwrite({ fn: getMenu, params: { category, query, limit: 6, } });
     // @ts-ignore
-    const { data: categories } = useAppwrite<Category[], {}>({
+    const { data: categories } = useAppwrite<Category[], Record<string, never>>({
         fn: getCategories,
     });
 
     useEffect(() => {
         refetch({ category, query, limit: 6 })
-    }, [category, query]);
+    }, [category, query, refetch]);
 
     return (
         <SafeAreaView className="bg-white h-full">

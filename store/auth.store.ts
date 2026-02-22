@@ -55,7 +55,7 @@ const useAuthStore = create<AuthState>((set) => ({
     logout: async () => {
         try {
             await signOut();
-            set({ isAuthenticated: false, user: null });
+            set({ isAuthenticated: false, user: null, isAdmin: false });
         } catch (e) {
             console.error('Logout error: ', e);
         }
