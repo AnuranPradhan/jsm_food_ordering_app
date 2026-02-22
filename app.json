@@ -48,8 +48,7 @@
           "project": "react-native",
           "organization": "rk-pharma"
         }
-      ],
-      "@sentry/react-native"
+      ]
     ],
     "experiments": {
       "typedRoutes": true,
