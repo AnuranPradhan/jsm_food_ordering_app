@@ -9,6 +9,7 @@ export interface MenuItem extends Models.Document {
     protein: number;
     rating: number;
     type: string;
+    categories?: Category;
 }
 
 export interface Category extends Models.Document {
@@ -20,6 +21,9 @@ export interface User extends Models.Document {
     name: string;
     email: string;
     avatar: string;
+    phone: number;
+    address: string;
+    isAdmin?: boolean;
 }
 
 export interface CartCustomization {

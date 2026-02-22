@@ -19,7 +19,8 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.anuranpradhan.ProjectPharma"
     },
     "web": {
       "bundler": "metro",
@@ -47,11 +48,18 @@
           "project": "react-native",
           "organization": "rk-pharma"
         }
-      ]
+      ],
+      "@sentry/react-native"
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "d963f54d-7670-43dd-8621-85d92f99019d"
+      }
     }
   }
 }

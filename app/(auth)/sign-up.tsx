@@ -1,27 +1,29 @@
-import {View, Text, Button, Alert} from 'react-native'
-import {Link, router} from "expo-router";
-import CustomInput from "@/components/CustomInput";
 import CustomButton from "@/components/CustomButton";
-import {useState} from "react";
-import {createUser} from "@/lib/appwrite";
-
+import CustomInput from "@/components/CustomInput";
+import { createUser } from "@/lib/appwrite";
+import useAuthStore from "@/store/auth.store";
+import { Link, router } from "expo-router";
+import { useState } from "react";
+import { Alert, Text, View } from 'react-native';
 
 const SignUp = () => {
+    const { fetchAuthenticatedUser } = useAuthStore();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [form, setForm] = useState({ name: '', email: '', password: '' });
 
     const submit = async () => {
         const { name, email, password } = form;
 
-        if(!name || !email || !password) return Alert.alert('Error', 'Please enter valid email address & password.');
+        if (!name || !email || !password) return Alert.alert('Error', 'Please fill in all fields.');
 
         setIsSubmitting(true)
 
         try {
-            await createUser({ email,  password,  name });
+            await createUser({ email, password, name });
+            await fetchAuthenticatedUser();
 
-            router.replace('/');
-        } catch(error: any) {
+            router.replace('/(tabs)');
+        } catch (error: any) {
             Alert.alert('Error', error.message);
         } finally {
             setIsSubmitting(false);

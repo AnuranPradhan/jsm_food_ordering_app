@@ -1,4 +1,3 @@
-import arrowBack from "../assets/icons/arrow-back.png";
 import arrowDown from "@/assets/icons/arrow-down.png";
 import arrowRight from "@/assets/icons/arrow-right.png";
 import bag from "@/assets/icons/bag.png";
@@ -18,25 +17,26 @@ import search from "@/assets/icons/search.png";
 import star from "@/assets/icons/star.png";
 import trash from "@/assets/icons/trash.png";
 import user from "@/assets/icons/user.png";
+import arrowBack from "../assets/icons/arrow-back.png";
 
 import avatar from "@/assets/images/avatar.png";
 import avocado from "@/assets/images/avocado.png";
+import pizzaOne from "@/assets/images/BabyCare.png";
 import bacon from "@/assets/images/bacon.png";
-import burgerOne from "@/assets/images/Medicine.png";
-import burgerTwo from "@/assets/images/Drugs.png";
-import buritto from "@/assets/images/PersonalCare.png";
+import Banner_copy from "@/assets/images/Banner_copy.png";
 import cheese from "@/assets/images/cheese.png";
 import coleslaw from "@/assets/images/coleslaw.png";
 import cucumber from "@/assets/images/cucumber.png";
+import burgerTwo from "@/assets/images/Drugs.png";
 import emptyState from "@/assets/images/empty-state.png";
 import fries from "@/assets/images/fries.png";
-import loginGraphic from "@/assets/images/login-graphic.png";
 import logo from "@/assets/images/logo.png";
+import burgerOne from "@/assets/images/Medicine.png";
 import mozarellaSticks from "@/assets/images/mozarella-sticks.png";
 import mushrooms from "@/assets/images/mushrooms.png";
 import onionRings from "@/assets/images/onion-rings.png";
 import onions from "@/assets/images/onions.png";
-import pizzaOne from "@/assets/images/BabyCare.png";
+import buritto from "@/assets/images/PersonalCare.png";
 import salad from "@/assets/images/salad.png";
 import success from "@/assets/images/success.png";
 import tomatoes from "@/assets/images/tomatoes.png";
@@ -169,7 +169,6 @@ export const images = {
     cucumber,
     emptyState,
     fries,
-    loginGraphic,
     logo,
     mozarellaSticks,
     mushrooms,
@@ -179,6 +178,7 @@ export const images = {
     salad,
     success,
     tomatoes,
+    Banner_copy,
     arrowBack,
     arrowDown,
     arrowRight,
