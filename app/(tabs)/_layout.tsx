@@ -32,7 +32,7 @@ export default function TabLayout() {
                 borderBottomRightRadius: isWeb ? 0 : 50,
                 marginHorizontal: isWeb ? 0 : 20,
                 height: isWeb ? 65 : 80,
-                position: isWeb ? 'fixed' as any : 'absolute',
+                position: 'absolute',
                 bottom: isWeb ? 0 : 40,
                 backgroundColor: 'white',
                 shadowColor: '#1a1a1a',
